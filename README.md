@@ -4,6 +4,7 @@
 실무에서 자주 쓰이는 OTP + JWT 구조를 멀티 모듈로 분리해 관리하는 구조를 익힐 수 있습니다.
 코드 외에도 인증 흐름, 서버 구성, 테스트 결과 등을 **Postman 캡처와 함께 블로그 시리즈로 상세히 설명**해두었습니다.
 
+[HOW_TO_RUN.md에 실행 방법 구체화 & 빠른 시작 안내 + API 테스트 방법이 나와있으니 참고해주세요.](https://github.com/grapeppodo/SpringSecurityAuthApp/blob/main/HOW_TO_RUN.md)
 
 ### ✨ 블로그 시리즈 구성
 
