@@ -82,11 +82,6 @@ spring.datasource.password=your_pw
 
 `business` 서버 기준:
 ```properties
-spring.application.name=business
-spring.datasource.url=jdbc:mysql://localhost:3306/your_db
-spring.datasource.username=your_id
-spring.datasource.password=your_pw
-
 server.port=9090
 auth.server.base.url=http://localhost:8080
 jwt.signing.key=your_jwt_secret
