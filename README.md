@@ -73,6 +73,7 @@ SpringSecurityAuthApp/
 
 `application.properties`는 Git에 포함되어 있지 않습니다. 
 아래 정보를 참고하여 **설정**을 직접 추가해야 합니다.
+
 `auth` 서버 기준:
 ```properties
 spring.application.name=auth
