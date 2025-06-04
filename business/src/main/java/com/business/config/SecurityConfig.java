@@ -1,7 +1,6 @@
 package com.business.config;
 
 import com.business.authentication.*;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -30,6 +29,11 @@ public class SecurityConfig {
     }
 
     @Bean
+    public AuthenticationServerProxy proxy(RestTemplate restTemplate) {
+        return new AuthenticationServerProxy(restTemplate);
+    }
+
+    @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
@@ -41,10 +45,9 @@ public class SecurityConfig {
 
     @Bean
     public AuthenticationServerProxy authenticationServerProxy(
-            RestTemplate restTemplate,
-            @Value("${auth.server.base.url}") String baseUrl
+            RestTemplate restTemplate
     ) {
-        return new AuthenticationServerProxy(restTemplate, baseUrl);
+        return new AuthenticationServerProxy(restTemplate);
     }
 
     /**
