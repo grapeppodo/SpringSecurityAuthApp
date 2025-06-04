@@ -9,6 +9,8 @@ HELP.md
 .application-dev.yml
 .applivetion-prod.yml
 .secret.yaml
+k8s/**/secret*.yaml
+
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/

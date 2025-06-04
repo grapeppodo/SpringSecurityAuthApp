@@ -17,6 +17,7 @@ build/
 .env
 .env.dev
 .env.prod
+k8s/**/secret*.yaml
 
 .config.yaml
 .application.yml

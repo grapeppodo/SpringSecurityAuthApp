@@ -8,6 +8,8 @@ HELP.md
 .application.yml
 .application-dev.yml
 .applivetion-prod.yml
+k8s/**/secret*.yaml
+
 .secret.yamlbuild/
 application*.yml
 application*.properties
