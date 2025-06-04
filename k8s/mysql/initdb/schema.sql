@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS ss_auth;
+
+USE ss_auth;
+
 CREATE TABLE IF NOT EXISTS `ss_auth`.`user` (
     `username` VARCHAR(45) NOT NULL,
     `password` TEXT NULL,
