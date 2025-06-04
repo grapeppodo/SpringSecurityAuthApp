@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  auth:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env.dev
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+
+  business:
+    build:
+      context: ./business
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    env_file:
+      - .env.dev
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      AUTHENTICATE_SERVER_BASE_URL: http://auth-service:8080
