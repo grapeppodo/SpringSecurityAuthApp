@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: business
+  jpa:
+    hibernate:
+      ddl-auto: none
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+server:
+  port: 9090
+
+authenticate:
+  server:
+    base:
+      url: ${AUTH_SERVER_URL:http://auth:8080}
+
+jwt:
+  signing:
+    key: ${JWT_SIGNING_KEY}
