@@ -13,6 +13,15 @@ build/
 .settings
 .springBeans
 .sts4-cache
+.env.*
+.env
+.env.dev
+.env.prod
+
+.config.yaml
+.application.yml
+.application-dev.yml
+.applivetion-prod.yml
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
