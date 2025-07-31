@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: business-deployment
+  labels:
+    app: business
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: business
+  template:
+    metadata:
+      labels:
+        app: business
+    spec:
+      containers:
+        - name: business
+          image: springsecurity/business:1.0
+          ports:
+            - containerPort: 9090
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "dev"
+            - name: AUTH_SERVER_URL
+              value: "http://auth:8080"
