@@ -44,3 +44,16 @@ jobs:
           file: ./business/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/business:latest
+
+      - name: Set up kubeconfig
+        run: |
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.KUBECONFIG_DATA }}" > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config
+
+      - name : Deploy auth
+        run: kubectl apply -f auth/deployment.yaml --kubeconfig=$HOME/.kube/config
+
+      - name: Deploy business
+        run: kubectl apply -f business/deployment.yaml --kubeconfig=$HOME/.kube/config
+
