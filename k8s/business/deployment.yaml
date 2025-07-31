@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: business
-          image: springsecurity/business:1.0
+          image: ghcr.io/your-username/business:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 9090
           env:

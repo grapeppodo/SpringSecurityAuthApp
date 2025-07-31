@@ -18,7 +18,8 @@ spec:
           command: ['sh', '-c', 'until nc -z mysql-service 3306; do echo waiting for mysql...; sleep 2; done']
       containers:
         - name: auth
-          image: springsecurity/auth:1.0
+          image: ghcr.io/grapeppodo/auth:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
